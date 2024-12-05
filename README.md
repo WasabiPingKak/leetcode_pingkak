@@ -1,5 +1,7 @@
 # leetcode_pingkak
 
+[1. Two Sum](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/1%20-%20Two%20Sum.md)
+
 [26. Remove Duplicates from Sorted Array](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/26%20-%20Remove%20Duplicates%20from%20Sorted%20Array.md)
 
 [27. Remove Element](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/27%20-%20Remove%20Element.md)

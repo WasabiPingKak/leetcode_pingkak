@@ -64,14 +64,13 @@ O($n^2$)
 
 我們必須使用 Hash Table 來輔助檢索：
 
-當我們用迴圈檢查陣列的中每一個數字 `b` 時，會同時在 Hash Table 中尋找 `(target - b)`。
+當我們用迴圈檢查陣列的中每一個數字 `b` 時，要同時在 Hash Table 中尋找 `(target - b)`。
 
-1. 如果 `(target - b)` 存在，代表目前的 `b` 和表中的某個數字組合起來剛好等於 `target`，我們就找到了這一組解，並且可以直接使用 Hash Table 記錄的 index。
+1. 如果 `(target - b)` 存在，代表目前的 `b` 與表中的某個數字組合起來剛好等於 `target`，我們就找到了這一組解，並且可以直接使用 Hash Table 記錄的 index。
 
 2. 如果 `(target - b)` 不在 Hash Table 中，那我們還是要將目前的數字 `b` 與它的 index 加入 Hash Table，因為在後續的檢查中，這個 `b` 有可能會成為某個未來數字的 `(target - b')`。
 
 如此一來，我們就能邊檢查陣列中的數字，邊用 Hash Table 快速找到目標配對。
-
 
 ```c++
 class Solution {
@@ -86,19 +85,19 @@ public:
             // 我們要找 (target - nums[i]) 有沒有出現在 hash table 過
             auto it = hash_diff.find(target - nums[i]);
 
-            if (it == hash_diff.end()) {
-                // 如果找不到 (target - nums[i])
-                // 代表目前的 nums[i] 還無法跟 Hash Table 內已知的值湊成一組解
-                // 因此將目前的 nums[i] 與 index i 插入 Hash Table
-                // 因為現在的 nums[i] 有可能會成為幾輪迴圈之後 (target - nums[x]) 的解
-                hash_diff[nums[i]] = i;
-            } else {
+            if (it != hash_diff.end()) {
                 // 如果 (target - nums[i]) 在 Hash Table 內有值
                 // 代表這個結果之前算過了，而且它就是解
                 // 所以 Hash Table 紀錄的 value 就是對應答案的 index 位置
                 // 加上現在的 i ，就是兩個 a + b = target 中，a 與 b 的 index
                 int index = it->second;
                 return {index, i};
+            } else {
+                // 如果找不到 (target - nums[i])
+                // 代表目前的 nums[i] 還無法跟 Hash Table 內已知的值湊成一組解
+                // 因此將目前的 nums[i] 與 index i 插入 Hash Table
+                // 因為現在的 nums[i] 有可能會成為幾輪迴圈之後 (target - nums[x]) 的解
+                hash_diff[nums[i]] = i;
             }
         }
 
