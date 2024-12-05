@@ -4,7 +4,7 @@
 [1. Two Sum](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/1%20-%20Two%20Sum.md)
 
 ## 🏅Stack
-[20. Parentheses](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/20%20-%20Valid%20Parentheses.md)
+[20. Valid Parentheses](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/20%20-%20Valid%20Parentheses.md)
 
 
 ## Trivial
