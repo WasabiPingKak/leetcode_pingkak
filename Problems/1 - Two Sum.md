@@ -1,0 +1,138 @@
+# 1 - Two Sum
+
+## 原題目連結
+[1. Two Sum](https://leetcode.com/problems/two-sum/description/)
+
+## 題意
+給定一個陣列(array) `nums` 跟一個 `target`，請你在這個陣列中找出兩個數，這兩個數的和剛好等於 `target`。
+
+回傳這兩個數在陣列中的 index。
+
+你可以假設每組輸入必定有且僅有一組唯一的解，且輸入中的元素不會重複使用。
+
+## Example
+Example 1:
+```
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: 因為 nums[0] + nums[1] == 9, 所以 return [0, 1].
+```
+Example 2:
+```
+Input: nums = [3,2,4], target = 6
+Output: [1,2]
+```
+Example 3:
+```
+Input: nums = [3,3], target = 6
+Output: [0,1]
+```
+
+## 解法一
+### 雙迴圈暴力解
+我們要找出`a + b = target`的唯一解，用兩個迴圈遍歷所有的 `nums[i] + nums[j] == target`。
+
+```c++
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        for (int i = 0; i < nums.size(); i++) {
+            for (int j = i + 1 ; j < nums.size(); j++) {
+                if (nums[i] + nums[j] == target) {
+                    return {i, j};
+                }
+            }
+        }
+
+        // 不會走到這裡，因為題目保證有解
+        return {};
+    }
+};
+```
+
+### 時間複雜度
+O($n^2$)
+
+但是這個解法太慢了，這個題目還有線性複雜度的解法，可以在一次遍歷迴圈後就找出解答。
+
+## 解法二
+### Hash table
+
+當我們要找出滿足條件 `a + b = target` 的一組數字時，可以透過移項將公式改寫為 `a = target - b`。
+
+也就是說，如果我們在陣列中檢視某個數字 `b` 時，若發現 `(target - b)` 也存在於陣列中，那麼我們就找到了答案。
+
+我們必須使用 Hash Table 來輔助檢索：
+
+當我們用迴圈檢查陣列的中每一個數字 `b` 時，會同時在 Hash Table 中尋找 `(target - b)`。
+
+1. 如果 `(target - b)` 存在，代表目前的 `b` 和表中的某個數字組合起來剛好等於 `target`，我們就找到了這一組解，並且可以直接使用 Hash Table 記錄的 index。
+
+2. 如果 `(target - b)` 不在 Hash Table 中，那我們還是要將目前的數字 `b` 與它的 index 加入 Hash Table，因為在後續的檢查中，這個 `b` 有可能會成為某個未來數字的 `(target - b')`。
+
+如此一來，我們就能邊檢查陣列中的數字，邊用 Hash Table 快速找到目標配對。
+
+
+```c++
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        // 在 C++，unordered_map 就是現成的 O(1) Hash Table
+        // 本題的 (Key, Value) 分別為 (b, idx_b)
+        unordered_map<int, int> hash_diff;
+
+        for (int i = 0; i < nums.size(); i++) {
+            // nums[i] 就是本輪迴圈中的 b
+            // 我們要找 (target - nums[i]) 有沒有出現在 hash table 過
+            auto it = hash_diff.find(target - nums[i]);
+
+            if (it == hash_diff.end()) {
+                // 如果找不到 (target - nums[i])
+                // 代表目前的 nums[i] 還無法跟 Hash Table 內已知的值湊成一組解
+                // 因此將目前的 nums[i] 與 index i 插入 Hash Table
+                // 因為現在的 nums[i] 有可能會成為幾輪迴圈之後 (target - nums[x]) 的解
+                hash_diff[nums[i]] = i;
+            } else {
+                // 如果 (target - nums[i]) 在 Hash Table 內有值
+                // 代表這個結果之前算過了，而且它就是解
+                // 所以 Hash Table 紀錄的 value 就是對應答案的 index 位置
+                // 加上現在的 i ，就是兩個 a + b = target 中，a 與 b 的 index
+                int index = it->second;
+                return {index, i};
+            }
+        }
+
+        // 不會走到這裡，因為題目保證有解
+        return {};
+    }
+};
+```
+
+邏輯確定之後，這段程式還可以進一步簡化
+
+```c++
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int, int> hash_diff;
+
+        for (int i = 0; i < nums.size(); i++) {
+            if (hash_diff.count(target - nums[i])) {
+                // 如果 Hash Table 中可以找到 (target - nums[i])
+                // 那目前的 index i 與 Hash Table 內的 value(前一個解的 index) 就是答案
+                return {i, hash_diff[target - nums[i]]}
+            }
+
+            // 如果 Hash Table 內找不到
+            // 將目前的 nums[i] 插入 Hash Table，供後續的檢索
+            hash_diff[nums[i]] = i;
+        }
+
+        // 不會走到這裡，因為題目保證有解
+        return {};
+    }
+};
+```
+
+### 時間複雜度
+O(n)
