@@ -1,0 +1,153 @@
+# 2 - Add Two Numbers
+
+## 原題目連結
+[2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/description/)
+
+## 題意
+給你兩個非空的鏈結串列(Linked-list)，以反序表示一個非負的整數，每一個節點只有一個個位數。
+
+請你算出這兩個由反序 Linked-list 表示的數的和，然後用相同的形式回傳。
+
+你可以假設除了 0 這個數本身，其他數字不會有額外的前導零。
+
+## Example
+```
+Example 1:
+Input: l1 = [2,4,3], l2 = [5,6,4]
+Output: [7,0,8]
+Explanation: 342 + 465 = 807.
+
+Example 2:
+Input: l1 = [0], l2 = [0]
+Output: [0]
+
+Example 3:
+Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+Output: [8,9,9,9,0,0,0,1]
+```
+
+## 鏈結串列 (Linked-list)
+Linked-list 是一個非常基本的資料結構，常常會與陣列(array)這個資料結構做比較。
+
+Array 的資料順序是線性的，並且會以連續的順序將資料存放在記憶體內。
+
+Linked-list 的資料順序也是線性的，但是資料未必會以線性的順序存放在記憶體中。
+
+Linked-list 的節點內會存放指向下一個資料節點的***指標(pointer)***。
+
+### ※※※ 你必須要先懂什麼是 C/C++ 的 ***指標(pointer)***，才能繼續往下讀 ※※※
+這裡不教你什麼是指標。
+
+通常每一個節點的內容會長得像下面這樣：資料本身(***val***)與指向下一個節點記憶體位置的指標(***\*next***)
+```c++
+// Definition for singly-linked list.
+struct ListNode {
+    int val;
+    ListNode *next;
+};
+```
+
+然後 LeetCode 編輯區給你的註解描述了它怎麼定義 ListNode 的結構
+```c++
+// Definition for singly-linked list.
+struct ListNode {
+    int val;
+    ListNode *next;
+
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+```
+
+後面的三個東西`ListNode()`, `ListNode(int x)`, `ListNode(int x, ListNode *next)` 是這個 Linked-list 的建構子(constructor)，代表你可以用這三種方法去初始化一個 `ListNode`。
+
+用法分別是：
+1. `ListNode()` 不帶參數：
+
+   若你使用了不帶參數的建構子，則這個 `ListNode` 被初始化的時候會將 `val` 設為 `0`, `next` 設為 `nullptr`。
+   ```c++
+   ListNode *ptr_a = new ListNode();
+   ```
+   你宣告了一個指向 `ListNode` 結構的指標 `ptr_a`，指向一個不帶參數的建構子所建構的節點，它的 `val` 為 `0`，且下一個指標指向 `nullptr` 的節點。
+
+
+2. `ListNode(int x)` 帶一個 `int` 參數：
+
+   若你使用了帶一個 `int` 參數的建構子，則這個 `ListNode` 被初始化的時候會將 `val` 設為 `x`, `next` 設為 `nullptr`。
+   ```c++
+   ListNode *ptr_b = new ListNode(114514);
+   ```
+
+   你宣告了一個指向 `ListNode` 結構的指標 `ptr_b`，指向一個帶 `int` 參數的建構子所建構的節點，它的 `val` 為 `114514`，且下一個指標指向 `nullptr` 的節點。
+
+3. `ListNode(int x, ListNode *next)` 帶一個 `int` 參數與一個指標參數 `next`：
+
+   若你使用了帶一個 `int` 參數的建構子，則這個 `ListNode` 被初始化的時候會將 `val` 設為 `x`, 結構內的 `next` 變數設為參數提供的 `next`。
+   ```c++
+   ListNode *ptr_c = new ListNode(1919810893, ptr_a);
+   ```
+   你宣告了一個指向 `ListNode` 結構的指標 `ptr_c`，指向一個帶 `int` 參數的建構子所建構的節點，它的 `val` 為 `1919810893`，且下一個指標指向 `ptr_a` 所指向的節點。
+
+## 解法
+模擬兩個整數的直式加法，靠右對齊，但題目已經將每一位的數值反序存在 Linked-list，也就是已經對齊了，按照順序把每一個 `ListNode` 內的值加起來即可，超過 `10` 的值進位到下一個節點，因為每一個節點只代表一個位數。
+
+需要判斷的幾個地方為當兩個 List 不等長的時候，與最後一位加完還要進位的時候，需要額外增加一個節點。
+
+```c++
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        // 分別宣告兩個指標，指向傳入的 Linked-list 的開頭
+        auto *p = l1;
+        auto *q = l2;
+
+        // 宣告一個 answer 的指標，準備用來指向存放答案的 Linked-list 的開頭
+        ListNode *answer = nullptr;
+        // 宣告一個指標指向 answer 這個 List，用於後續的操作
+        auto *r = answer;
+
+        // 宣告一個變數存放進位
+        int carry = 0;
+
+        while (p != nullptr || q != nullptr || carry != 0) {
+            // 當指向輸入的 list 指標 p 或 q 沒有走到盡頭時，繼續做加法
+            // 如果兩個 list 不等長，則比較短的那一個會先遇到 nullptr
+            // 令這個比較短的為 0
+            // FYI: 這裡用到了三元運算子(Ternary Operator)
+            int p_val = (p == nullptr) ? 0 : p->val;
+            int q_val = (q == nullptr) ? 0 : q->val;
+
+            // 直式加法
+            int digit_sum = p_val + q_val + carry;
+            // 計算進位
+            carry = digit_sum / 10;
+            // 保留個位數
+            digit_sum %= 10;
+
+            // 將計算完的結果(digit_sum)放入答案的 ListNode 中
+            if (r == nullptr) {
+                // 如果此時 r 是空指標，代表這是 List 的 Head
+                // 在記憶體中建構一個 Head 節點
+                r = new ListNode(digit_sum);
+                answer = r;
+            } else {
+                // 如果 r 不是空指標，代表它指向目前存放答案的 list 最前面一位
+                // 建構一個新的 ListNode 存放這一輪計算的結果
+                // 然後把它接在 r 指向的下一個節點
+                r->next = new ListNode(digit_sum);
+                // r 這個指標往前進一位
+                r = r->next;
+            }
+
+            // 判斷兩個輸入的 list 指標有沒有走到盡頭
+            // 沒有的話就前進一位
+            if (p != nullptr) p = p->next;
+            if (q != nullptr) q = q->next;
+        }
+
+        // 回傳答案，answer 會指向你前面用來存放答案的 list 的開頭
+        return answer;
+    }
+};
+```
