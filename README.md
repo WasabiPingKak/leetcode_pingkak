@@ -1,12 +1,15 @@
 # leetcode_pingkak
 
-## 🏅Hash Table
-[1. Two Sum](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/1%20-%20Two%20Sum.md)
+## 🎯Linked-list
+🎖️[2. Add Two Numbers](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/2%20-%20Add%20Two%20Numbers.md)
 
-## 🏅Stack
-[20. Valid Parentheses](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/20%20-%20Valid%20Parentheses.md)
+## 🎯Hash Table
+🎖️[1. Two Sum](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/1%20-%20Two%20Sum.md)
 
-## 🏅Binary Search
+## 🎯Stack
+🎖️[20. Valid Parentheses](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/20%20-%20Valid%20Parentheses.md)
+
+## 🎯Binary Search
 [69. Sqrt(x)](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/69%20-%20Sqrt(x).md)
 
 ## Trivial
