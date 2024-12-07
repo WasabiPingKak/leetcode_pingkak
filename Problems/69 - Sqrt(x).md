@@ -1,0 +1,122 @@
+# 69 - Sqrt(x)
+
+## 原題目連結
+[69. Sqrt(x)](https://leetcode.com/problems/sqrtx/description/)
+
+## 題意
+給你一個非負的整數 `x`，回傳 `x` 的平方根，你只需要回傳這個平方根的整數部分就好，小數直接捨去。
+
+### 限制：你不可以使用語言內建的開根號工具
+
+比方說 C++ 的 `pow(x, 0.5)` 或 python 的 `x ** 0.5`。
+
+## Example
+```
+Example 1:
+Input: x = 4
+Output: 2
+Explanation: 4 的平方根是 2，所以回傳 2。
+
+Example 2:
+Input: x = 8
+Output: 2
+Explanation: 8 的平方跟是 2.82842.....，因為我們只要整數位，所以回傳 2。
+```
+
+## 解法
+題目要求不能直接用內建的數學函式或工具，所以我們的思路改成用找的，逐個尋找一個整數 n 的平方有沒有超過 x。
+
+### 二分搜尋(Binary Search)
+在一組***已經排序好***的資料中，每次都透過計算中間位置的值，來判斷要尋找的目標在整組資料的左側還是右側，每次就可以去掉一半的資料量。
+
+然後再重複這個過程直到找到目標。
+
+純搜尋的時間複雜度為 O($log(n)$)
+
+### 解題
+x 平方根必定小於 x，所以我們可以在 0 ~ x 範圍內做二分搜尋(binary search)。
+
+二分搜尋的左邊界為 L，右邊界為 R，透過中間值(middle)判斷目標在中間值的左側還是右側：
+* 如果目標在 middle 的左側，保留 L，則把 middle 設定為右邊界 R
+* 如果目標在 middle 的右側，保留 R，則把 middle 設定為左邊界 L
+* 如果目標就是 middle，那就回傳 middle
+
+根據本題的題意，我們只要找到平方根的整數部分就好，比方說$\sqrt{8} = 2.82842....$，代表 L 與 R 的左右邊界的整數值會找到 2 與 3，此時左邊界的 2 就是答案。
+
+
+```c++
+class Solution {
+public:
+    int mySqrt(int x) {
+        if (x == 0 || x == 1) {
+            // 邊界條件，0 與 1 就直接回傳
+            return x;
+        }
+
+        // 使用遞迴(Recursion)去尋找跟設定左右邊界
+        return binary_search(0, x, (long long)x);
+    }
+
+    int binary_search(int L, int R, long long x) {
+        if (R - L <= 1) {
+            // 當左右邊界相差 1 的時候，左邊界就是答案
+            return L;
+        }
+
+        // 計算中間值
+        long long middle = (L + R) / 2;
+
+        // 本題的目標(target)是找 middle 的平方
+        // 避免溢位(overflow)，型態要改為 long long
+        long long square = middle * middle;
+
+        if (x < square) {
+            // 目標 middle 在左側，縮小右邊界 R
+            R = middle;
+        } else if (x > square) {
+            // 目標 middle 在右側，縮小左邊界 L
+            L = middle;
+        } else {
+            // 直接找到答案 (x 剛好是完全平方數)
+            return middle;
+        }
+
+        // 重新設定完邊界之後，遞迴地做下一步二分搜尋
+        return binary_search(L, R, x);
+    }
+};
+```
+有一個避免溢位的技巧就是移項，不要算出 `middle * middle`，把一個 `middle` 移項到 x 那一側，變成判斷 `middle > (x / middle)`，就不需要使用到 `long long`。
+
+```c++
+class Solution {
+public:
+    int mySqrt(int x) {
+        if (x == 0 || x == 1) {
+            return x;
+        }
+        return binary_search(0, x, x);
+    }
+
+    int binary_search(int L, int R, int x) {
+        if (R - L <= 1) {
+            return L;
+        }
+
+        int middle = (L + R) / 2;
+
+        if (middle > x / middle) {
+            R = middle;
+        } else if (middle < x / middle) {
+            L = middle;
+        } else {
+            return middle;
+        }
+
+        return binary_search(L, R, x);
+    }
+};
+```
+
+## 時間複雜度
+標準的二分搜尋法，時間複雜度為O($log(n)$)
