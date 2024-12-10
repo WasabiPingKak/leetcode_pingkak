@@ -3,6 +3,8 @@
 ## 🎯Linked-list
 🎖️[2. Add Two Numbers](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/2%20-%20Add%20Two%20Numbers.md)
 
+🎖️[19. Remove Nth Node From End of List](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/19%20-%20Remove%20Nth%20Node%20From%20End%20of%20List.md)
+
 ## 🎯Hash Table
 🎖️[1. Two Sum](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/1%20-%20Two%20Sum.md)
 
