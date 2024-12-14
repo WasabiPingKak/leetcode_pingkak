@@ -18,7 +18,7 @@
 |:---:|:---:|:---:|---|
 |🎞️|🔰|🎖️|[2. Add Two Numbers](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/2.%20Add%20Two%20Numbers.md)|
 |||🎖️|[19. Remove Nth Node From End of List](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/19.%20Remove%20Nth%20Node%20From%20End%20of%20List.md)|
-|||️️️🎖️|[24. Swap Nodes in Pairs]()|
+|||️️️🎖️|[24. Swap Nodes in Pairs](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/24.%20Swap%20Nodes%20in%20Pairs.md)|
 
 ## Hash Table🎯
 |影片|新手|經典|題目|
