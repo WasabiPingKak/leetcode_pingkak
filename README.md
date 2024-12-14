@@ -24,6 +24,7 @@
 |:---:|:---:|:---:|---|
 |||🎖️|[1. Two Sum](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/1.%20Two%20Sum.md)|
 ||🔰|🎖️|[202. Happy Number](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/202.%20Happy%20Number.md)|
+||🔰||[217. Contains Duplicate](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/217.%20Contains%20Duplicate.md)|
 
 ## Stack🎯
 
