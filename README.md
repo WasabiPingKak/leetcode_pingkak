@@ -1,7 +1,7 @@
 # leetcode_pingkak
 
 ## 計劃書
-[冰角的 LeetCode 解題冷藏庫計劃]()
+[冰角的 LeetCode 解題冷藏庫計劃](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Preface/%E5%86%B0%E8%A7%92%E7%9A%84%20LeetCode%20%E8%A7%A3%E9%A1%8C%E5%86%B7%E8%97%8F%E5%BA%AB%E8%A8%88%E5%8A%83.md)
 
 ## 圖例
 
