@@ -23,6 +23,7 @@
 |影片|新手|經典|題目|
 |:---:|:---:|:---:|---|
 |||🎖️|[1. Two Sum](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/1.%20Two%20Sum.md)|
+||🔰|🎖️|[202. Happy Number](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/202.%20Happy%20Number.md)|
 
 ## Stack🎯
 
