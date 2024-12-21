@@ -28,7 +28,6 @@
 ||🔰||[217. Contains Duplicate](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/217.%20Contains%20Duplicate.md)|
 
 ## Stack🎯
-
 |影片|新手|經典|題目|
 |:---:|:---:|:---:|---|
 ||🔰|🎖️|[20. Valid Parentheses](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/20.%20Valid%20Parentheses.md)|
@@ -37,6 +36,16 @@
 |影片|新手|經典|題目|
 |:---:|:---:|:---:|---|
 ||||[69. Sqrt(x)](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/69.%20Sqrt(x).md)|
+
+## Tree
+|影片|新手|經典|題目|
+|:---:|:---:|:---:|---|
+|||🎖️|[199. Binary Tree Right Side View](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/199.%20Binary%20Tree%20Right%20Side%20View.md)|
+
+## Branch First Search
+|影片|新手|經典|題目|
+|:---:|:---:|:---:|---|
+|||🎖️|[199. Binary Tree Right Side View](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/199.%20Binary%20Tree%20Right%20Side%20View.md)|
 
 ## Trivial
 |影片|新手|經典|題目|
