@@ -35,7 +35,9 @@
 ## Binary Search🎯
 |影片|新手|經典|題目|
 |:---:|:---:|:---:|---|
+||🔰|🎖️|[35. Search Insert Position](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/35.%20Search%20Insert%20Position.md)|
 ||||[69. Sqrt(x)](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/69.%20Sqrt(x).md)|
+
 
 ## Tree
 |影片|新手|經典|題目|
