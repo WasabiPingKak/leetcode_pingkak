@@ -50,6 +50,7 @@
 ## Trivial
 |影片|新手|經典|題目|
 |:---:|:---:|:---:|---|
+||🔰||[9. Palindrome Number](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/9.%20Palindrome%20Number.md)|
 ||||[66. Plus One](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/66.%20Plus%20One.md)|
 ||||[67. Add Binary](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/67.%20Add%20Binary.md)|
 
