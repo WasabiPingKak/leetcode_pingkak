@@ -13,43 +13,47 @@
 
 💩 - 營養成分不足，有基本功又很閒再去玩
 
-## Linked list🎯
+## 以資料結構(Data Structure)分類
+
+### Linked list🎯
 |影片|新手|經典|題目|
 |:---:|:---:|:---:|---|
 |🎞️|🔰|🎖️|[2. Add Two Numbers](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/2.%20Add%20Two%20Numbers.md)|
 |||🎖️|[19. Remove Nth Node From End of List](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/19.%20Remove%20Nth%20Node%20From%20End%20of%20List.md)|
 |||️️️🎖️|[24. Swap Nodes in Pairs](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/24.%20Swap%20Nodes%20in%20Pairs.md)|
 
-## Hash Table🎯
+### Hash Table🎯
 |影片|新手|經典|題目|
 |:---:|:---:|:---:|---|
 |||🎖️|[1. Two Sum](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/1.%20Two%20Sum.md)|
 ||🔰|🎖️|[202. Happy Number](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/202.%20Happy%20Number.md)|
 ||🔰||[217. Contains Duplicate](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/217.%20Contains%20Duplicate.md)|
 
-## Stack🎯
+### Stack🎯
 |影片|新手|經典|題目|
 |:---:|:---:|:---:|---|
 ||🔰|🎖️|[20. Valid Parentheses](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/20.%20Valid%20Parentheses.md)|
 
-## Binary Search🎯
+### Tree
+|影片|新手|經典|題目|
+|:---:|:---:|:---:|---|
+|||🎖️|[199. Binary Tree Right Side View](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/199.%20Binary%20Tree%20Right%20Side%20View.md)|
+
+## 以演算法(Algorithm)分類
+
+### Binary Search🎯
 |影片|新手|經典|題目|
 |:---:|:---:|:---:|---|
 ||🔰|🎖️|[35. Search Insert Position](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/35.%20Search%20Insert%20Position.md)|
 ||||[69. Sqrt(x)](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/69.%20Sqrt(x).md)|
+||🔰|🎖️|[704. Binary Search](https://leetcode.com/problems/binary-search/description/)|
 
-
-## Tree
+### Branch First Search
 |影片|新手|經典|題目|
 |:---:|:---:|:---:|---|
 |||🎖️|[199. Binary Tree Right Side View](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/199.%20Binary%20Tree%20Right%20Side%20View.md)|
 
-## Branch First Search
-|影片|新手|經典|題目|
-|:---:|:---:|:---:|---|
-|||🎖️|[199. Binary Tree Right Side View](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/199.%20Binary%20Tree%20Right%20Side%20View.md)|
-
-## Trivial
+## Trivial - 瑣碎到無法分類
 |影片|新手|經典|題目|
 |:---:|:---:|:---:|---|
 ||🔰||[9. Palindrome Number](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/9.%20Palindrome%20Number.md)|
