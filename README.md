@@ -46,7 +46,7 @@
 |:---:|:---:|:---:|---|
 ||🔰|🎖️|[35. Search Insert Position](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/35.%20Search%20Insert%20Position.md)|
 ||||[69. Sqrt(x)](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/69.%20Sqrt(x).md)|
-||🔰|🎖️|[704. Binary Search](https://leetcode.com/problems/binary-search/description/)|
+||🔰|🎖️|[704. Binary Search](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/704.%20Binary%20Search.md)|
 
 ### Branch First Search
 |影片|新手|經典|題目|
