@@ -46,6 +46,7 @@
 |:---:|:---:|:---:|---|
 ||🔰|🎖️|[35. Search Insert Position](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/35.%20Search%20Insert%20Position.md)|
 ||||[69. Sqrt(x)](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/69.%20Sqrt(x).md)|
+||🔰||[74. Search a 2D Matrix](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/74.%20Search%20a%202D%20Matrix.md)|
 ||🔰|🎖️|[704. Binary Search](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/704.%20Binary%20Search.md)|
 
 ### Branch First Search
