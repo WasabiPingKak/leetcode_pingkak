@@ -49,6 +49,7 @@
 ||||[69. Sqrt(x)](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/0-99/69.%20Sqrt(x).md)|
 ||🔰||[74. Search a 2D Matrix](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/0-99/74.%20Search%20a%202D%20Matrix.md)|
 ||||[153. Find Minimum in Rotated Sorted Array](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/153.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.md)|
+||||[167. Two Sum II - Input Array Is Sorted](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted.md)|
 ||🔰|🎖️|[704. Binary Search](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/704.%20Binary%20Search.md)|
 
 ### Branch First Search
