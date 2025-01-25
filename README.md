@@ -53,7 +53,7 @@
 ||||[167. Two Sum II - Input Array Is Sorted](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted.md)|
 ||🔰|🎖️|[704. Binary Search](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/704.%20Binary%20Search.md)|
 
-### Branch First Search
+### Breadth First Search
 |影片|新手|經典|題目|
 |:---:|:---:|:---:|---|
 |||🎖️|[199. Binary Tree Right Side View](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/199.%20Binary%20Tree%20Right%20Side%20View.md)|
