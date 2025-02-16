@@ -40,6 +40,7 @@
 |:---:|:---:|:---:|---|
 ||🔰|🎖️|[100. Same Tree](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/100.%20Same%20Tree.md)|
 ||🔰|🎖️|[104. Maximum Depth of Binary Tree](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/104.%20Maximum%20Depth%20of%20Binary%20Tree.md)|
+||🔰|🎖️|[110. Balanced Binary Tree](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/110.%20Balanced%20Binary%20Tree.md)|
 |||🎖️|[199. Binary Tree Right Side View](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/199.%20Binary%20Tree%20Right%20Side%20View.md)|
 
 ## 以演算法(Algorithm)分類
@@ -65,7 +66,7 @@
 |:---:|:---:|:---:|---|
 ||🔰|🎖️|[100. Same Tree](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/100.%20Same%20Tree.md)|
 ||🔰|🎖️|[104. Maximum Depth of Binary Tree](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/104.%20Maximum%20Depth%20of%20Binary%20Tree.md)|
-
+||🔰|🎖️|[110. Balanced Binary Tree](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/110.%20Balanced%20Binary%20Tree.md)|
 
 ## Trivial - 瑣碎到無法分類
 |影片|新手|經典|題目|
