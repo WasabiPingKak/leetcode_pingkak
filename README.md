@@ -43,6 +43,7 @@
 ||🔰|🎖️|[108. Convert Sorted Array to Binary Search Tree](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/108.%20Convert%20Sorted%20Array%20to%20Binary%20Search%20Tree.md)|
 ||🔰|🎖️|[110. Balanced Binary Tree](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/110.%20Balanced%20Binary%20Tree.md)|
 |||🎖️|[199. Binary Tree Right Side View](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/199.%20Binary%20Tree%20Right%20Side%20View.md)|
+||🔰|🎖️|[226. Invert Binary Tree](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/226.%20Invert%20Binary%20Tree.md)|
 
 ## 以演算法(Algorithm)分類
 
