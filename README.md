@@ -47,6 +47,7 @@
 |||🎖️|[199. Binary Tree Right Side View](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/199.%20Binary%20Tree%20Right%20Side%20View.md)|
 ||🔰|🎖️|[226. Invert Binary Tree](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/226.%20Invert%20Binary%20Tree.md)|
 ||🔰|🎖️|[257. Binary Tree Paths](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/257.%20Binary%20Tree%20Paths.md)|
+||🔰||[404. Sum of Left Leaves](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/404.%20Sum%20of%20Left%20Leaves.md)|
 
 ## 以演算法(Algorithm)分類
 
@@ -77,6 +78,7 @@
 ||🔰||[111. Minimum Depth of Binary Tree](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/111.%20Minimum%20Depth%20of%20Binary%20Tree.md)|
 ||🔰|🎖️|[112. Path Sum](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/112.%20Path%20Sum.md)|
 ||🔰|🎖️|[257. Binary Tree Paths](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/257.%20Binary%20Tree%20Paths.md)|
+||🔰||[404. Sum of Left Leaves](https://github.com/WasabiPingKak/leetcode_pingkak/blob/main/Problems/100-999/404.%20Sum%20of%20Left%20Leaves.md)|
 
 ## Trivial - 瑣碎到無法分類
 |影片|新手|經典|題目|
